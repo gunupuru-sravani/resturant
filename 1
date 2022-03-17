@@ -1,0 +1,72 @@
+SQL> create table resturantt(billidnum number(10),
+  2  custname varchar2(10),
+  3  phno number(10),
+  4  amount number(10));
+
+Table created.
+
+SQL> create sequence billidnum
+  2  start with 1000001
+  3  increment by 1
+  4  minvalue 1000001
+  5  maxvalue 1009999
+  6  cycle;
+
+Sequence created.
+
+SQL> insert into resturantt values(billidnum.nextval,'divya',7894,352);
+
+1 row created.
+
+SQL> insert into resturantt values(billidnum.nextval,'sri',7587,589);
+
+1 row created.
+
+SQL> insert into resturantt values(billidnum.nextval,'sreevani',7742,879);
+
+1 row created.
+
+SQL> insert into resturantt values(billidnum.nextval,'charan',76985,584);
+
+1 row created.
+
+SQL> insert into resturantt values(billidnum.nextval,'harini',7478,784);
+
+1 row created.
+
+SQL> insert into resturantt values(billidnum.nextval,'srivali',8741,789);
+
+1 row created.
+
+SQL> insert into resturantt values(billidnum.nextval,'sree',6897,251);
+
+1 row created.
+
+SQL> insert into resturantt values(billidnum.nextval,'anusha',7412,257);
+
+1 row created.
+
+SQL> insert into resturantt values(billidnum.nextval,'amrutha',8541,874);
+
+1 row created.
+
+SQL> insert into resturantt values(billidnum.nextval,'karan',9541,547);
+
+1 row created.
+
+SQL> select *from resturantt;
+
+ BILLIDNUM CUSTNAME         PHNO     AMOUNT
+---------- ---------- ---------- ----------
+   1000001 divya            7894        352
+   1000002 sri              7587        589
+   1000003 sreevani         7742        879
+   1000004 charan          76985        584
+   1000005 harini           7478        784
+   1000006 srivali          8741        789
+   1000007 sree             6897        251
+   1000008 anusha           7412        257
+   1000009 amrutha          8541        874
+   1000010 karan            9541        547
+
+10 rows selected.
